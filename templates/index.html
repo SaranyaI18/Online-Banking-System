@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+
+
+
+<head>
+	<title>Online Banking </title>
+</head>
+
+<div style = "background-image: url('{%static 'img/banking-sector.JPG'%}'); height:620px;  background-size: cover; margin-top:  1px">
+	
+
+	<h1 style="display: block; margin: auto; text-align: center;margin-top: 1px;color: red">Online Banking</h1>
+
+	<div style="margin-top: 100px">
+		<nav aria-label="breadcrumb">
+  			<ol class="breadcrumb">
+    			<li class="breadcrumb-item active" aria-current="page">Home</li>
+  			</ol>
+		</nav>
+	</div>
+
+	<br>
+
+	<h1 style="display: block;margin: auto; text-align: center; color: red">We ensure your secure!!</h1>
+
+
+	<body>
+
+
+		<button type="button" class="btn btn-warning" style="margin-left: 600px;margin-top: 150px"><a href="{%url 'customerpage'%}">View Customers</a></button>
+		
+		
+		
+
+	</body>
+
+</div>
+
+
+{% endblock %}

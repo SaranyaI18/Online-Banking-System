@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1 style="display:block;margin:auto; text-align: center"><b>Transfer</b></h1>
+
+<br>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{%url 'homepage'%}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{%url 'customerpage'%}">Customers</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Transfer</li>
+  </ol>
+</nav>
+
+{% block body %}
+
+
+<br>
+<br>
+
+<body>
+
+
+
+<div class="card m-3">
+  	<div class="card-body">
+
+		<div class="container" style="display: inline-block;">
+	
+  			<label class="col-sm-3 col-form-label text-right" style="display: inline-block; margin-top: 50px">To:</label>
+         		<div class="dropdown" style="display: inline-block">
+					<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+    					<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Larry</a></li>
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alex</a></li>
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Watson</a></li>
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Jacky</a></li>
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Finston</a></li>
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Phorel</a></li>
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Manyamax</a></li>
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Josh</a></li> 
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Abraham</a></li>
+      						<li role="presentation" class="divider"></li>
+      						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Josh</a></li>
+      					</ul>
+      				</button>
+  				</div>
+
+  		</div>
+	
+
+
+                    
+
+    
+<div class="form-group row">
+    <label class="col-sm-3 col-form-label text-right">Credit:</label>
+    <input class="col-sm-8" type="number" id="credit" name="credit" required>
+</div>
+ 				
+<button type="submit" style="margin-left: 700px;" class="btn btn-warning"><a href="{%url 'customerpage'%}">Submit</a></button>
+
+
+	</div>
+</div>
+            
+  
+ 
+
+{% endblock body %}
+
+
+{% endblock %}
+

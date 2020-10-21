@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+
+<h1 class="text-center">Customers</h1>
+
+<div style="margin-top: 10px">
+	<nav aria-label="breadcrumb">
+  		<ol class="breadcrumb">
+    		<li class="breadcrumb-item"><a href="{% url 'homepage'%}">Home</a></li>
+    		<li class="breadcrumb-item active" aria-current="page">Customers</li>
+  		</ol>
+	</nav>
+</div>
+
+
+
+{% block body %}
+<div class="container my-3">
+    
+    <div class="container my-3 mt-3 userlist">
+        <table class="table my-5 mb-5 pb-5">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+               		<th scope="col">Balance</th>
+               		<th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{user.username}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.Current_balance}}</td>
+                    <td><a href="{%url 'transferpage' %}">start transfer</a></td>
+
+                   
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock body %}
+
+
+
+{% endblock %}
